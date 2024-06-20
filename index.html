@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ITS Project</title>
+    <link rel="icon" type="image/png" href="ff.png" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+      }
+      .input {
+        display: flex;
+        padding: 1rem;
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .in {
+        border: 1px solid #fff;
+        padding: 10px;
+        border-radius: 5px;
+        width: 40%;
+        background-color: #f2d2bd;
+        color: #000;
+        font-size: 1rem;
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+      }
+      .in::placeholder {
+        color: #000;
+        opacity: 1; /* Firefox */
+      }
+      .in:focus {
+        background-color: #ffdab9;
+        color: #000;
+        border-color: #ffa500;
+        outline: none;
+      }
+      .btn {
+        width: 5rem;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: yellow;
+        font-weight: bolder;
+        border: none;
+      }
+      .btn:hover {
+        background-color: gold;
+      }
+      .texts {
+        color: #fff;
+        font-family: "Courier New", Courier, monospace;
+        font-weight: bolder;
+        background-color: #333;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+        width: 100%;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .time {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="input">
+        <div class="texts" id="length">Engine and boggies length is 20m</div>
+        <div id="time" class="time"></div>
+        <input
+          class="in"
+          type="number"
+          placeholder="Enter number of train boggies...."
+          id="BoggiesNum"
+        />
+        <input
+          class="in"
+          type="number"
+          placeholder="Enter your speed...."
+          id="speed"
+        />
+        <button class="btn" id="play">PLAY</button>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
